@@ -1,9 +1,6 @@
 package me.barny1094875.shulkerstackingog;
 
-import me.barny1094875.shulkerstackingog.Listeners.ShulkerBoxPickupHandler;
-import me.barny1094875.shulkerstackingog.Listeners.ShulkerBoxStackingController;
-import me.barny1094875.shulkerstackingog.Listeners.ShulkerDragDupePrevention;
-import me.barny1094875.shulkerstackingog.Listeners.ShulkerDragHandler;
+import me.barny1094875.shulkerstackingog.Listeners.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ShulkerStacking_OG extends JavaPlugin
@@ -23,7 +20,7 @@ public final class ShulkerStacking_OG extends JavaPlugin
         getServer().getPluginManager().registerEvents(new ShulkerBoxPickupHandler(), this);
         getServer().getPluginManager().registerEvents(new ShulkerDragHandler(), this);
         getServer().getPluginManager().registerEvents(new ShulkerDragDupePrevention(), this);
-        //        getServer().getPluginManager().registerEvents(new ShulkerBoxHopperHandler(), this);
+        getServer().getPluginManager().registerEvents(new ShulkerBoxHopperHandler(), this);
     }
 
     public static ShulkerStacking_OG getPlugin()

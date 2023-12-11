@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'me.barny1094875'
-version = '1.19'
+version = '1.19.1'
 
 repositories {
     mavenCentral()

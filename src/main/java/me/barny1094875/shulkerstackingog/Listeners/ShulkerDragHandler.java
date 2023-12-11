@@ -43,7 +43,6 @@ public class ShulkerDragHandler implements Listener
             // right click drag
             if (event.getType().equals(DragType.SINGLE))
             {
-                //                System.out.println("single");
                 // if the player drags a stack of shulker boxes
                 if (shulkerBoxes.getAmount() <= 1)
                 {
@@ -62,6 +61,8 @@ public class ShulkerDragHandler implements Listener
                         dragInventory.getItem(slotsDragged.get(i)).setAmount(dragInventory.getItem(slotsDragged.get(i)).getAmount() + 1);
                     }
                 }
+                // remove the shulker boxes from the player's cursor
+                event.getWhoClicked().setItemOnCursor(new ItemStack(shulkerBoxes.getType(), shulkerBoxes.getAmount() - numberOfSlotsDragged));
             }
             // left click drag
             else if (event.getType().equals(DragType.EVEN))

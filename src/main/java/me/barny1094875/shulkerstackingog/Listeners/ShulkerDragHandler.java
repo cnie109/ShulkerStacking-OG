@@ -32,7 +32,7 @@ public class ShulkerDragHandler implements Listener
         {
             // check if the inventory was closed in the last tick
             // this prevents a dupe glitch from occurring
-            if (ShulkerStacking_OG.isInventoryClosed)
+            if (ShulkerStacking_OG.isInventoryClosed.get(event.getWhoClicked().getUniqueId()))
             {
                 return;
             }

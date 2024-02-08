@@ -13,7 +13,6 @@ public class ShulkerDragDupePrevention implements Listener
     @EventHandler(priority = EventPriority.LOWEST)
     public void shulkerDragDupePrevent(InventoryCloseEvent event)
     {
-//        ShulkerStacking_OG.isInventoryClosed = true;
         ShulkerStacking_OG.isInventoryClosed.put(event.getPlayer().getUniqueId(), true);
         Bukkit.getScheduler().runTaskLater(ShulkerStacking_OG.getPlugin(),
                 () -> ShulkerStacking_OG.isInventoryClosed.put(event.getPlayer().getUniqueId(), false), 2);

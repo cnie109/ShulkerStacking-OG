@@ -12,7 +12,6 @@ public final class ShulkerStacking_OG extends JavaPlugin
     private static ShulkerStacking_OG plugin;
 
     // used to prevent dupe glitches from inventory drag events
-//    public static boolean isInventoryClosed = false;
     public static HashMap<UUID, Boolean> isInventoryClosed = new HashMap<>();
 
     @Override
